@@ -8,9 +8,11 @@ class AdjacencyMatrix:
 
     def activate_relation(self, elem_1, elem_2):
         self.matrix[elem_1][elem_2] = 1
+        self.matrix[elem_2][elem_1] = 1
 
     def deactivate_relation(self, elem_1, elem_2):
         self.matrix[elem_1][elem_2] = 0
+        self.matrix[elem_2][elem_1] = 0
 
     def get_matrix(self):
         return self.matrix
