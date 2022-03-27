@@ -52,8 +52,8 @@ class VecNetwork:
 
                 next_n_nodes = self.architecture[j+1]
                 self.vectors[f'alpha_{j}'] = self.activation(self.vectors[f'zeta_{j}'])
-                self.vectors[f'theta_{j}'] = np.ndarray(shape=(next_n_nodes, n_nodes))
-                self.vectors[f'zeta_{j+1}'] = np.dot(self.vectors[f'theta_{j}'] , self.vectors[f'alpha_{j}'])
+                self.vectors[f'theta_{j}'] = np.random.normal(size=(next_n_nodes, n_nodes)) + 1 # bias
+                self.vectors[f'zeta_{j+1}'] = np.dot(self.vectors[f'theta_{j}'], self.vectors[f'alpha_{j}'])
 
     def get_output(self):
         return self.vectors[f'alpha_{self.total_layers - 1}']
