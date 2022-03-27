@@ -24,7 +24,6 @@ class VecNetwork:
         self.vectors = {}
 
         self._init_vecs()
-        self._init_hidden_vecs()
 
     def _init_vecs(self):
 
@@ -37,11 +36,8 @@ class VecNetwork:
         self.vectors['theta_0'] = self.init_weights
         self.vectors['zeta_1'] = np.dot(self.init_weights, self.init_input)
 
-    def _init_hidden_vecs(self):
-        # TODO: User (or some external algo) can specify the values for the weights
-
-
-        """ Hidden layer initializations and computations """
+        # TODO: User (or some external algo) can specify fixed values for the weights
+        # Hidden layer initializations and computations (given 1st set of inputs)
         for j, n_nodes in enumerate(self.architecture):
 
             if j > 0:
