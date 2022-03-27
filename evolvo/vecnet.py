@@ -10,6 +10,8 @@ class VecNetwork:
         :param alpha_1: Initial Inputs
         :param theta_1: Initial Weights
         :param architecture: A list where each index corresponds to a layer, and the element denotes the num of nodes
+                             Example: [2,3,3,1] is a network with two input nodes, two hidden layers with three nodes
+                                      each, and one output node
         """
 
         self.init_input = alpha_1
@@ -36,6 +38,9 @@ class VecNetwork:
         self.vectors['zeta_1'] = np.dot(self.init_weights, self.init_input)
 
     def _init_hidden_vecs(self):
+        # TODO: User (or some external algo) can specify the values for the weights
+
+
         """ Hidden layer initializations and computations """
         for j, n_nodes in enumerate(self.architecture):
 
