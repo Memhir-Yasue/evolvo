@@ -5,6 +5,6 @@
 
 #### Year: 2,500,000,000 B.C.E
 #### Population: 0
-#### Status: Constructing the Genome; figuring out how to encode brain wirings, while computations remain vectorized ...
+#### Status: Constructing the Genome; figuring out how to encode brain wirings, while computations remain vectorized ... (maybe) 
 
 
